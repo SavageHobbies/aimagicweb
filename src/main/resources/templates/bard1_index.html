@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Magic Lister: List Products on eBay Effortlessly</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/styles.css}" />
+
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/6.0.0/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.0.0/firebase-ui-auth.css" />
+
+    <script th:src="@{/js/firebase-init.js}"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">AI Magic Lister</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+                <a id="start-signup" class="nav-item nav-link btn btn-primary">Sign In/Sign Up</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero" class="d-flex align-items-center">
+        <div class="container">
+            <h1>List Products on eBay in Minutes with AI Magic!</h1>
+            <p class="lead">Take a picture, and let AI handle the rest. <strong>Simplify your listing tasks</strong> and <strong>save time</strong> with our revolutionary tool.</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="images/product-listing-example.jpg" class="img-fluid" alt="Product listing example">
+                </div>
+                <div class="col-md-6">
+                    <ul class="list-unstyled features">
+                        <li><i class="fas fa-check"></i> Effortless product listing with AI assistance</li>
+                        <li><i class="fas fa-check"></i> Automatically generates titles, descriptions, and categories</li>
+                        <li><i class="fas fa-check"></i> Optimizes listings for better visibility and sales</li>
+                        <li><i class="fas fa-check"></i> Integrates seamlessly with eBay</li>
+                        <li><i class="fas fa-check"></i> Saves you time and effort</li>
+                    </ul>
+                    <a href="#firebaseui-auth-container" class="btn btn-primary btn-lg">Get Started for Free</a>
+                </div>
+            </div>
+            <div id="firebaseui-auth-container"></div>
+        </div>
+    </section>
+
+    
