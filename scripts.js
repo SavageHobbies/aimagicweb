@@ -1,4 +1,4 @@
-import * as firebaseui from 'https://cdn.firebase.com/libs/firebaseui/4.8.0/firebaseui.js';
+import * as firebaseui from 'https://cdn.jsdelivr.net/npm/firebaseui@4.8.0/dist/firebaseui.js';
 
 const ui = new firebaseui.auth.AuthUI(firebase.auth());
 // This callback function is triggered when the DOM is loaded.
