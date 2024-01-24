@@ -1,8 +1,8 @@
-// This callback function is triggered when the DOM is loaded.
+import * as firebaseui from 'https://cdn.firebase.com/libs/firebaseui/4.8.0/firebaseui.js';
+
+const ui = new firebaseui.auth.AuthUI(firebase.auth());// This callback function is triggered when the DOM is loaded.
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize the FirebaseUI Widget using Firebase
-    const ui = new firebaseui.auth.AuthUI(firebase.auth());
-  
+    // Initialize the FirebaseUI Widget using Firebase 
     // FirebaseUI config
     const uiConfig = {
       callbacks: {
