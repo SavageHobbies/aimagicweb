@@ -1,4 +1,7 @@
-import * as firebaseui from './node_modules/firebaseui-ja/index.js';
+import { getAuth } from 'firebase/auth';
+import { onAuthStateChanged } from 'firebase/auth';
+import { getFirestore, collection, getDocs } from 'firebase/firestore';
+import * as firebaseui from 'firebaseui';
 
 const ui = new firebaseui.auth.AuthUI(firebase.auth());
 // This callback function is triggered when the DOM is loaded.
