@@ -1,7 +1,7 @@
 import * as firebaseui from 'https://cdn.firebase.com/libs/firebaseui/4.8.0/firebaseui.js';
 
 const ui = new firebaseui.auth.AuthUI(firebase.auth());
-/ This callback function is triggered when the DOM is loaded.
+// This callback function is triggered when the DOM is loaded.
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize the FirebaseUI Widget using Firebase 
     // FirebaseUI config
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
           // User signed in successfully
           console.log(authResult); 
           return false; 
-        }
+        },
         uiShown: function() {
           // The widget is rendered. Hide the loader.
           // Hide the loader logic here (if any).
