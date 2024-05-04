@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
+<script src="index.js"></script>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eBay Item Listing</title>
+    <style>
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        header img {
+            max-width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="aimagic.by1.net/images/logo.png" alt="Logo">
+    </header>
+
+    <main>
+        <h1>Create eBay Listing</h1>
+        <form>
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required><br>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" required></textarea><br>
+
+            <label for="price">Price:</label>
+            <input type="number" id="price" name="price" min="0" step="0.01" required><br>
+
+            <label for="shipping">Shipping:</label>
+            <select id="shipping" name="shipping">
+                <option value="free">Free Shipping</option>
+                <option value="buyer">Buyer Pays</option>
+            </select><br>
+
+            <label for="images">Product Images:</label>
+            <input type="file" id="images" name="images" accept="image/*" multiple><br>
+
+            <div id="image-preview"></div>
+
+            <input type="submit" value="Create Listing">
+        </form>
+    </main>
+
+    <script>
+        // JavaScript code to handle image preview
+        const imageInput = document.getElementById('images');
+        const imagePreview = document.getElementById('image-preview');
+
+        imageInput.addEventListener('change', function() {
+            imagePreview.innerHTML = '';
+            const files = this.files;
+            for (let i = 0; i < files.length; i++) {
+                const file = files[i];
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const img = document.createElement('img');
+                    img.src = e.target.result;
+                    img.style.maxWidth = '200px';
+                    img.style.margin = '5px';
+                    imagePreview.appendChild(img);
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+</body>
+</html>
