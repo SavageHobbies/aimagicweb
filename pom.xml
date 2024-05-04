@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    
+    <modelVersion>4.0.0</modelVersion>
+    
+    <!-- Group ID, aligned with your package structure -->
+    <groupId>net.by1.aimagic.lister</groupId>
+    
+    <!-- Artifact ID, name of your project -->
+    <artifactId>AIMagicLister</artifactId>
+    
+    <!-- Version of your application -->
+    <version>0.0.1-SNAPSHOT</version>
+    
+    <!-- Packaging type - jar is typical for Spring Boot applications -->
+    <packaging>jar</packaging>
+
+    <!-- The name and a brief description of your project -->
+    <name>AIMagicLister</name>
+    <description>Spring Boot application for listing items efficiently with AI assistance.</description>
+
+    <!-- Parent POM for Spring Boot projects -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        
+        <!-- Set the version of Spring Boot you want to use -->
+        <version>2.6.3</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <!-- Properties for your project -->
+    <properties>
+        <!-- Set the version of Java you want to use -->
+        <java.version>11</java.version>
+    </properties>
+
+    <!-- Dependencies for your project -->
+    <dependencies>
+        
+        <!-- Spring Boot Starter Web includes all the dependencies for a web application -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        
+        <!-- Spring Boot Starter Thymeleaf for HTML templates -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+        
+        <!-- Additional dependencies can be added here -->
+    </dependencies>
+
+    <!-- Build configuration -->
+    <build>
+        <plugins>
+            <!-- Spring Boot Maven plugin -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
